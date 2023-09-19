@@ -139,10 +139,7 @@ img {
 }
 
 @media only screen and (max-width: 40em){
-  .container-fluid
-  {
-    text-align: center;
-  }
+ 
   .imghead
 {
   width: 20rem;
