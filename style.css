@@ -139,7 +139,10 @@ img {
 }
 
 @media only screen and (max-width: 40em){
- 
+ .img-fluid
+ {
+  margin-top: -56px;
+ }
   .imghead
 {
   width: 20rem;
