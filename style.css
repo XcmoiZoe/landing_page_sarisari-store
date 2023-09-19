@@ -139,6 +139,10 @@ img {
 }
 
 @media (max-width: 375px)   {
+  .container-fluid
+  {
+    text-align: center;
+  }
   .imghead
 {
   width: 20rem;
