@@ -14,27 +14,12 @@
   .responsive-two-columns > * {
       width:50%;
   }
+ 
 }
 
 * {
   background-color: #EE9003;
 }
-
-/* .img-head {
-  width: 650px;
-}
-
-.input {
-
-  border-radius: 12px;
-  background: #FFF;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  border: none;
-  width: 471px;
-  height: 51px;
-  flex-shrink: 0;
-}*/
-
 .space {
   height: 3%;
 }
@@ -73,13 +58,12 @@ input {
 {
   position:relative;
   left: 30px;
-  top: 190px;
+  top: 30px;
   width: 100px;
 }
 .wifi4
 {
   position:relative;
-
   bottom:5px;
   width: 40px;
 }
@@ -235,7 +219,7 @@ img {
 {
   position:relative;
   left: 50px;
-  width: 30px;
+  width: 20px;
   bottom:70px;
 }
 .wifi4
