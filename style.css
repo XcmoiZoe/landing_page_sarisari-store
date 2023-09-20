@@ -233,3 +233,8 @@ img {
   transform: scale(1); 
 }
 } 
+.error-message {
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  margin-top: 5px;
+}

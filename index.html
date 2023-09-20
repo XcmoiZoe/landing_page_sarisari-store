@@ -103,44 +103,61 @@
     const last4DigitInput = document.querySelector('input[placeholder="LAST 4 DIGIT NUMBER"]');
     const submitButton = document.querySelector('.btn-submit');
 
-    // Function to validate form data
-    function validateForm() {
-      // Validate each field
-      if (storeNameInput.value.trim() === '') {
-        alert('Please enter a Store Name.');
-        storeNameInput.focus();
-        return false;
-      }
+// Function to display error messages
+function displayError(inputElement, errorMessage) {
+  const errorSpan = document.createElement('span');
+  errorSpan.className = 'error-message';
+  errorSpan.textContent = errorMessage;
+  inputElement.parentElement.appendChild(errorSpan);
+}
 
-      if (promoCodeInput.value.trim() === '') {
-        alert('Please enter a Promo Code.');
-        promoCodeInput.focus();
-        return false;
-      }
+// Function to remove error messages
+function removeErrorMessages() {
+  const errorMessages = document.querySelectorAll('.error-message');
+  errorMessages.forEach((errorMessage) => {
+    errorMessage.remove();
+  });
+}
 
-      if (fullNameInput.value.trim() === '') {
-        alert('Please enter your Full Name.');
-        fullNameInput.focus();
-        return false;
-      }
+// Function to validate form data
+function validateForm() {
+  // Remove any existing error messages
+  removeErrorMessages();
 
-      const last4Digit = last4DigitInput.value.trim();
-      if (last4Digit === '' || isNaN(last4Digit) || last4Digit.length !== 4) {
-        alert('Please enter a valid 4-digit number.');
-        last4DigitInput.focus();
-        return false;
-      }
+  let isValid = true;
 
-      // If all validations pass, allow the form to submit
-      return true;
-    }
+  // Validate each field
+  if (storeNameInput.value.trim() === '') {
+    displayError(storeNameInput, 'Please enter a Store Name.');
+    isValid = false;
+  }
 
-    // Add an event listener to the submit button
-    submitButton.addEventListener('click', function(event) {
-      if (!validateForm()) {
-        event.preventDefault(); // Prevent form submission if validation fails
-      }
-    });
+  if (promoCodeInput.value.trim() === '') {
+    displayError(promoCodeInput, 'Please enter a Promo Code.');
+    isValid = false;
+  }
+
+  if (fullNameInput.value.trim() === '') {
+    displayError(fullNameInput, 'Please enter your Full Name.');
+    isValid = false;
+  }
+
+  const last4Digit = last4DigitInput.value.trim();
+  if (last4Digit === '' || isNaN(last4Digit) || last4Digit.length !== 4) {
+    displayError(last4DigitInput, 'Please enter a valid 4-digit number.');
+    isValid = false;
+  }
+
+  // If all validations pass, allow the form to submit
+  return isValid;
+}
+
+// Add an event listener to the submit button
+submitButton.addEventListener('click', function (event) {
+  if (!validateForm()) {
+    event.preventDefault(); // Prevent form submission if validation fails
+  }
+});
   </script>
 </body>
 
