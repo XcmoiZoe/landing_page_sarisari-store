@@ -1,3 +1,21 @@
+.responsive-two-columns {
+  display:flex;
+  flex-wrap:wrap;
+}
+
+/* columns */
+.responsive-two-columns > * {
+  width:100%;
+  padding:1rem;
+}
+
+/* tablet breakpoint */
+@media (min-width:768px) {
+  .responsive-two-columns > * {
+      width:50%;
+  }
+}
+
 * {
   background-color: #EE9003;
 }
@@ -22,7 +40,7 @@
 }
 
 .space-head {
-  height: 350px;
+  height: 110px;
 }
 
 .space-head1 {
