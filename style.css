@@ -20,7 +20,7 @@
   background-color: #EE9003;
 }
 .space {
-  height: 3%;
+  height: 3% !important;
 }
 
 .space-head {
@@ -142,7 +142,7 @@ img {
 @media only screen and (max-width: 40em){
  .img-fluid
  {
-  margin-top: -56px;
+  margin-top: -89px;
  }
   .imghead
 {
@@ -183,7 +183,7 @@ img {
   width:300px;
 }
 .space {
-  height: 20px;
+  height: 20px !important;
 }
 
 .space-head {
@@ -242,7 +242,7 @@ img {
   /* For mobile phones: */
 .img-fluid
 {
-  margin-top: 170px;
+  margin-top: -89px !important;
 }
 }
 @media only screen and (max-width: 320px) {

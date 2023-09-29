@@ -13,7 +13,7 @@
     <style>
         /* CSS for the red glow animation */
         .error-glow {
-            animation: glow 0.2s ease-in-out infinite alternate;
+            animation: glow 1.5s ease-in-out infinite alternate;
         }
 
         @keyframes glow {
@@ -29,13 +29,15 @@
 <body>
 <div class="responsive-two-columns">
     <div>
-        <!-- <img src="./image/wifi.png" alt="" class="rotate1" id="wifi3"> -->
+        <img src="./image/wifi.png" alt="" class="rotate1" id="wifi3">
         <img src="./image/DESIGN.png" class="img-fluid imghead">
     </div>
     <div>
         <div class="space-head"></div>
-      
-
+        <div class="error-messages">
+            <!-- Error messages will be displayed here -->
+        </div>
+        <form action="process_form.php" method="post">
         <input class="form-control" type="text" placeholder="STORE NAME" aria-label="default input example">
         <div class="space"></div>
         <input class="form-control" type="text" placeholder="PROMO CODE" aria-label="default input example">
@@ -47,9 +49,7 @@
         <button type="submit" class="btn-submit">
             <h2 style="background: none;">SUBMIT</h2>
         </button>
-        <div class="error-messages">
-            
-        </div>
+    </form>
     </div>
 </div>
 
